@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Clean — Premium Car Wash & Spa</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ══ MOBILE NAV DRAWER ══ -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" onclick="closeMob()">Home</a>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#gallery" onclick="closeMob()">Before / After</a>
+  <a href="#booking" onclick="closeMob()">Booking</a>
+  <a href="#reviews" onclick="closeMob()">Reviews</a>
+
+  <button class="mob-book-btn" onclick="closeMob();document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now →</button>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="logo.png" alt="Eco Clean Logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Before/After</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+  
+  <button class="nav-btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now</button>
+
+  <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="home">
+  <div class="hero-orb o1"></div>
+  <div class="hero-orb o2"></div>
+  <div class="drop-el dp1"></div>
+  <div class="drop-el dp2"></div>
+  <div class="drop-el dp3"></div>
+  <div class="drop-el dp4"></div>
+  <div class="drop-el dp5"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✓ Eco-Friendly &nbsp;|&nbsp; ✓ Doorstep Service &nbsp;|&nbsp; ✓ Premium Quality</div>
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-circle">
+        <img class="hero-logo-img" src="logo.png" alt="Eco Clean">
+      </div>
+    </div>
+    <h1>Premium Car Care at <br><span>Your Doorstep</span></h1>
+    <p>Eco-friendly, fast, and professional car wash services — bringing showroom shine to wherever you are.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now →</button>
+      <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View Services</button>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num" id="s1">0+</div><div class="stat-label">Cars Washed</div></div>
+      <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Average Rating</div></div>
+      <div class="stat"><div class="stat-num" id="s2">0%</div><div class="stat-label">Happy Customers</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Eco Products</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="services text-center" id="services">
+  <div class="fade-in">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Our Premium Services</h2>
+    <p class="section-sub">From a quick exterior rinse to a full spa treatment — every package designed to perfection.</p>
+  </div>
+  <div class="services-grid fade-in">
+    <div class="service-card">
+      <div class="svc-icon-wrap">💧</div>
+      <div class="svc-title">Exterior Wash</div>
+      <div class="svc-desc">Full exterior clean with eco-safe foam, rinse, and hand-dry finish for a sparkling result.</div>
+      <div class="svc-price">From ₹299</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon-wrap">✨</div>
+      <div class="svc-title">Interior Cleaning</div>
+      <div class="svc-desc">Deep vacuum, dashboard wipe, seat shampoo, and deodorizer for a fresh cabin feel.</div>
+      <div class="svc-price">From ₹499</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon-wrap">🔧</div>
+      <div class="svc-title">Full Detailing</div>
+      <div class="svc-desc">Complete interior + exterior with clay bar treatment and paint enhancement polish.</div>
+      <div class="svc-price">From ₹1,299</div>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon-wrap">🛡</div>
+      <div class="svc-title">Ceramic Coating</div>
+      <div class="svc-desc">Professional nano ceramic protection for long-lasting gloss and surface durability.</div>
+      <div class="svc-price">From ₹4,999</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BEFORE / AFTER ══ -->
+<section class="comparison text-center" id="gallery">
+  <div class="fade-in">
+    <div class="section-label">See the Difference</div>
+    <h2 class="section-title">Before &amp; After</h2>
+    <p class="section-sub">Drag the slider left or right to see the dramatic transformation we deliver.</p>
+  </div>
+  <div class="slider-outer fade-in">
+    <div class="slider-wrap" id="sliderWrap">
+      <div class="badge-b">BEFORE</div>
+      <div class="badge-a">AFTER</div>
+
+      <!-- BEFORE panel -->
+      <div class="before-panel">
+        <div style="position:absolute;inset:0;background:linear-gradient(155deg,#001825 0%,#002535 30%,#003D4D 55%,#005A6E 80%,#007A94 100%);">
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(0,212,255,0.08) 0%,transparent 60%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:32%;background:linear-gradient(to top,#001520,#001e2d,transparent);"></div>
+          <div style="position:absolute;top:12%;left:0;right:0;bottom:32%;display:flex;align-items:center;justify-content:center;">
+            <img src="after-car.png" style="width:90%;max-width:500px;filter:brightness(0.6) contrast(0.9) saturate(0.6);" />  
+          </div>
+          <div class="shine-wrap">
+            <div class="shine-bar"></div>
+            <div class="shine-bar" style="animation-delay:1.5s;left:-100px;opacity:0.5;"></div>
+          </div>
+          <div id="sparkleContainer"></div>
+        </div>
+      </div>
+
+      <!-- AFTER panel -->
+      <div class="after-panel" id="afterPanel" style="clip-path:inset(0 50% 0 0);">
+        <div class="before-bg" style="position:absolute;inset:0;background:linear-gradient(160deg,#1a0f06 0%,#2d1a0a 40%,#3d2510 70%,#1e1005 100%);">
+          <div style="position:absolute;bottom:0;left:0;right:0;height:32%;background:linear-gradient(to top,#111,#1a1a1a,transparent);"></div>
+          <div style="position:absolute;top:12%;left:0;right:0;bottom:32%;display:flex;align-items:center;justify-content:center;">
+            <img src="before-car.png" style="width:90%;max-width:500px;filter:brightness(0.6) contrast(0.9) saturate(0.6);" />
+          </div>
+          <div id="rainContainer" class="rain-container"></div>
+          <div id="dustContainer" class="dust-container"></div>
+        </div>
+      </div>
+
+      <div class="slider-divider" id="sliderLine" style="left:50%;"></div>
+      <div class="slider-btn" id="sliderHandle" style="left:50%;">⇔</div>
+    </div>
+  </div>
+  <p style="color:rgba(255,255,255,0.5);font-size:12px;margin-top:12px;letter-spacing:0.5px;">↔ Drag slider to compare</p>
+</section>
+
+<!-- ══ BOOKING ══ -->
+    <section class="booking text-center" id="booking">
+      <div class="fade-in">
+        <div class="section-label">Reserve Your Slot</div>
+        <h2 class="section-title">Book a Service</h2>
+        <p class="section-sub">Schedule your car wash in minutes.</p>
+      </div>
+
+      <div class="booking-inner fade-in">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="e.g. Rahul Shah" required>
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="+91 9876543210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Select Service</label>
+            <select name="service" required>
+              <option value="">Choose a service...</option>
+              <option value="Exterior Wash">Exterior Wash — ₹299</option>
+              <option value="Interior Cleaning">Interior Cleaning — ₹499</option>
+              <option value="Full Detailing">Full Detailing — ₹1,299</option>
+              <option value="Ceramic Coating">Ceramic Coating — ₹4,999</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" name="date" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px;">
+          <label>Your Address</label>
+          <input type="text" name="address" placeholder="Enter address or landmark" required>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Confirm Booking 🔃
+        </button>
+
+      </div>
+    </section>
+
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials text-center" id="reviews">
+  <div class="fade-in">
+    <div class="section-label">Happy Customers</div>
+    <h2 class="section-title">What People Say</h2>
+    <p class="section-sub">Trusted by thousands of car owners across Gujarat.</p>
+  </div>
+  <div class="testi-grid fade-in">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Absolutely brilliant! My car looks better than when I bought it. The ceramic coating is just stunning — I keep looking back at it!"</p>
+      <div class="testi-author"><div class="avatar">RS</div><div><div class="author-name">Rahul Shah</div><div class="author-sub">Bhavnagar, Gujarat</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"They came right to my doorstep and finished the full detailing in under 2 hours. Super professional, eco-friendly products!"</p>
+      <div class="testi-author"><div class="avatar">PM</div><div><div class="author-name">Priya Mehta</div><div class="author-sub">Bhavnagar, Gujarat</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"The before-after difference was unreal. Booked in 2 minutes, punctual team, amazing results. Will definitely book again!"</p>
+      <div class="testi-author"><div class="avatar">AK</div><div><div class="author-name">Arjun Kapoor</div><div class="author-sub">Bhavnagar, Gujarat</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-row">
+        <img class="footer-logo-img" src="logo.png" alt="Eco Clean">
+      </div>
+      <p style="color:rgba(255,255,255,0.55);font-size:13px;line-height:1.7;">Bringing showroom-quality car care right to your doorstep with eco-friendly products and expert hands.</p>
+      <!-- <div class="social-icons">
+        <div class="social-icon">f</div>
+        <div class="social-icon">in</div>
+        <div class="social-icon">ig</div>
+        <div class="social-icon">yt</div>
+      </div> -->
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Exterior Wash</a></li>
+        <li><a href="#">Interior Cleaning</a></li>
+        <li><a href="#">Full Detailing</a></li>
+        <li><a href="#">Ceramic Coating</a></li>
+        <li><a href="#">Membership Plans</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📞 +91 94280 78873</a></li>
+        <li><a href="#">✉ hello@ecoclean.in</a></li>
+        <li><a href="#">📍 Bhavnagar, Gujarat</a></li>
+        <li><a href="#">🕐 Mon–Sat, 8am–7pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 EcoClean Premium Car Wash & Spa. All rights reserved. Made with 💧 in Gujarat.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
